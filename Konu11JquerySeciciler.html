@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Seçiciler</title>
+    <script src="/jquery-3.6.1.min.js"></script>
+    <style>
+        .brd{border:1px solid; min-height:34px;}
+    </style>
+</head>
+<body>
+    <h1>Jquery Seçiciler</h1>
+    <p>Jquery kütüphanesi ile javascript işlemlerii daha az kod ile pratik bbir şekilde kullanabilrisiniz</p>
+    <h2 id = "baslik">html elementlerini ID ye göre seçme</h2>
+    <p id="mesaj" class ="brd" ></pid>
+        <script>
+         //Jquery de kodlar ve seçme işlemleri $ karakteriyle yapılır
+
+         $(document).ready(function(){
+            // $(document).ready metodu döküman hazır oldğubnda kodalrın çalıştırılmasını sağlart
+            var secilecekEleman = $("#baslik"); // safadaki id değeri baslik olan elementi seç
+            $("#mesaj").text("Başşlıktan gelen içerik : " + secilecekEleman[0].innerText);
+            // # karakteri bir elementii id değerine göre seçer.
+            // . karakteri bir elementi class değerine göre seçer.
+
+
+         });
+        </script>
+
+        <hr>
+        <h2> Html eleentlerini etiket adına göre seçme</h2>
+         <p id = "etiket" class="brd"></p>
+         <script>
+
+
+           $(document).ready(function(){
+            var secilecekEleman = $("h2");
+            $("#etiket").text("Başşlıktan gelen içerik : " + secilecekEleman[1].innerText);
+
+        })
+    </script>
+    <hr>
+
+
+    <h2 class=" sinifSecici">Html elementlerini Class adına göre seçme</h2>
+    <p id="sinif" class = "brd"</p>
+    <script>
+
+
+        $(function(){ // $(document).ready(function(){}) yerine kullabılabilie.
+         var secilecekEleman = $(".sinifSecici");
+         $("#sinif").text("Başşlıktan gelen içerik : " + secilecekEleman[0].innerText);
+
+         
+
+
+        })
+     </script>
+       <hr>
+       <h2 class = "sinifSecici" > Html elementlerini css seç,icilerine göre seçme</h2>
+       <p id ="cssSecici" class = "brd"></p>
+       <script>
+        $(function () {
+            var secilecekEleman = $(".sinifSecici");
+            $("#cssSecici").text("Başlıktan gelen içerik " + secilecekEleman[1].innerText);
+
+            
+        })
+       </script>
+
+
+
+ 
+
+
+</body>
+</html>

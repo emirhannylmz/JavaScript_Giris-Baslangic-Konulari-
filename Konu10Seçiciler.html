@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Seçiciler</title>
+    <style>
+        body{color: darkgrey;}
+        .classsecici{color:crimson;}
+         #idsecici {color:red;}
+         .brd{border:7px solid; height:50px;}
+
+    </style>
+</head>
+<body>
+    <h1>Js Seçiciler</h1>
+
+    <p id="idsecici">
+        Javascript ile DOM(Document Object Model) üzerinden elementler üzerinde
+        hızlıca maniplasyon yapabilir. Bunun için document yani sayfa
+        üzerindeki istediğimiz elementi seçmemiz yeterlidir.
+    </p>
+    <p class="classsecici">
+            Javascript de sayfadaki elementlerin herhangi bir özelliği ile
+            elementi seçebiliriz. Id, name, class veya alt-üst ilişkili olduğu
+            bir element üzerinden.
+
+
+    </p>
+
+    <h2>Html Elementlerini id ye göre seçme</h2>
+
+    <p id="mrbdny" style width:40px; height: 80px;>
+        merhaba
+
+    </p>
+    <p id="jsIdSeciciTest" class ="brd">
+
+    </p>
+    <script>
+        const icerik = document.getElementById("mrbdny"); 
+        document.getElementById("jsIdSeciciTest").innerText = "mrbdny id li element içeriği:" + icerik.innerText;
+
+    </script>
+    <hr>
+
+    <h2>Html elementlerini Etiket adına(tag name) göre seçme</h2>
+    <div>div  içeriği</div>
+
+    <div id="bosDiv" class="brd"></div>
+
+
+
+
+
+    <h2 id="olayBaslik">addEventListener Metodu</h2>
+    <p id="OlayDinleme" class="brd">  </p>
+    <p>Javascript'de addEventListener metodu ile olaylar dinleyebilriz.</p>
+    <button onclick="removeHandler()">addEventListener Sil </button>
+    <script>
+        function ornekfunction() {
+            document.getElementById("OlayDinleme").innerHTML= "addEvventListener Çalıştı"
+        }
+        // addeventListener ekleme
+        function removeHandler() {
+            Document.getElementById("olayBaslik").addEventListener("click", ornekfunction)
+        }
+       
+
+
+
+    </script>
+   
+</body>
+</html>

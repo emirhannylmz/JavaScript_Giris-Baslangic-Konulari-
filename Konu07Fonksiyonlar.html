@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>JS Fonksiyonlar</title>
+</head>
+<body>
+    <h1>JS Fonksiyonlar</h1>
+    <div>
+        Js fonksyiyonlar c# daki metptşara karşılık gelir
+    </div>
+    <p>
+        Html p elementi paragraf yzıları için kullanılır.
+    </p>
+
+    <script>
+        // Fonksiyon Tanımlama
+        function fonksiyonAdi(parametre) {
+            console.log('Fonksiyona gönderilen değer :>> ', parametre);
+            
+        }
+        // Fonksiyonu Çağırma===
+
+        fonksiyonAdi("Javascript ile fonksiyon çağırımı")
+        fonksiyonAdi("Fonksiyona parametre gönderdik")
+
+   function ToplamaYap(sayi1,sayi2) {
+    console.log('Sayıların Toplamı :>> ', sayi1+sayi2);
+   }
+   ToplamaYap(435,132)
+
+   function RenkDegistir(arkaplanRengi, yaziRengi) {
+    document.bgColor = arkaplanRengi; 
+    document.fgColor = yaziRengi;   
+   }
+   //RenkDegistir("black", "white")
+
+   var icgenislik = window.innerWidth; // Windows nesnesi de javascript de hazır gelen birdeğer nesnedir
+
+   var icyukseklik = window.innerHeight; // özelliği bize tarayıcı pencere yüksekliğini verir.
+   // Dış Ölçüler
+
+   var disgenislik = window.outerWidth;
+   var disyukseklik = window.outerHeight;
+
+   document.write("<h3>Pencere  iç genişliği : " , icgenislik + "</h3>")
+   document.write("<h3> Pencere iç yüksekliği :" , icyukseklik + "</h3>")// ekrana yazdırmada html elementleri kullanabiliriz 
+
+   document.write("<h3>Pencere  dış genişliği : " , disgenislik + "</h3>")
+   document.write("<h3>Pencere dış yüksekliği :" , disyukseklik + "</h3>")
+   
+   if ( genislik>505) {
+    RenkDegistir("white", "black")
+   }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
